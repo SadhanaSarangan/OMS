@@ -1,0 +1,1 @@
+OMS.jar is present in OMS\out\artifacts\OMS_jar
