@@ -20,6 +20,11 @@ public class Supply {
         this.quantity = quantity;
     }
 
+    public Supply(String productId, Double quantity) {
+        this.productId = productId;
+        this.quantity = quantity;
+    }
+
     @Override
     public String toString() {
         return "Supply{" +

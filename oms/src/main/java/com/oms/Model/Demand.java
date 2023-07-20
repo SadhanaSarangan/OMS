@@ -3,30 +3,24 @@ package com.oms.Model;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
-import java.util.Date;
-
 @Getter
 @Setter
-public class Product {
-    String productId;
-    LocalDateTime updateTimeStamp;
-    Double quantity;
-    String status;
+public class Demand {
 
-    public Product(String productId, LocalDateTime updateTimeStamp, Double quantity) {
+    String productId;
+    Double quantity;
+
+
+    public Demand(String productId, Double quantity) {
         this.productId = productId;
-        this.updateTimeStamp = updateTimeStamp;
         this.quantity = quantity;
     }
 
     @Override
     public String toString() {
-        return "Product{" +
+        return "Demand{" +
                 "productId='" + productId + '\'' +
-                ", updateTimeStamp=" + updateTimeStamp +
                 ", quantity=" + quantity +
                 '}';
     }
 }
-

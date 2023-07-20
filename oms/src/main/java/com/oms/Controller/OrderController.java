@@ -19,8 +19,6 @@ public class OrderController {
     private ShipmentService shipmentService;
     @RequestMapping(value = "/getOrderDetails", method = RequestMethod.GET)
     public OrderShipment getOrderDetails(@RequestBody Order order, ModelMap model) throws ExecutionException, InterruptedException {
-       // String orderId = order.getOrderId();
-        System.out.println(order);
         ExecutorService executorService = Executors.newFixedThreadPool(5);
         Future orderDetails = executorService.submit(getOrder(order, orderService));
         Future shipmentDetails = executorService.submit(getShipment(order, shipmentService));
